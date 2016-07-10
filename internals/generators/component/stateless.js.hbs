@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
 
 {{#if wantCSS}}
 import styles from './styles.css'
@@ -12,5 +12,9 @@ const {{ properCase name }} = () => (
   {{/if}}
   </div>
 )
+
+{{ properCase name }}.propTypes = {
+  
+}
 
 export default {{ properCase name }}

@@ -1,5 +1,6 @@
+
 // selectLocationState expects a plain JS object for the routing state
-const selectLocationState = () => {
+export const selectLocationState = () => {
   let prevRoutingState
   let prevRoutingStateJS
 
@@ -15,6 +16,4 @@ const selectLocationState = () => {
   }
 }
 
-export {
-  selectLocationState
-}
+export const selectNavigationState = () => state => state.get('navigation')

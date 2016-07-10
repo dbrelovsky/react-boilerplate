@@ -12,6 +12,7 @@
  */
 
 import React from 'react'
+import Navbar from 'containers/Navbar'
 
 import styles from './styles.css'
 
@@ -24,6 +25,7 @@ export default class App extends React.Component { // eslint-disable-line react/
   render () {
     return (
       <div className={styles.container}>
+        <Navbar />
         {this.props.children}
       </div>
     )

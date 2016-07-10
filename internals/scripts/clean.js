@@ -22,23 +22,25 @@ process.stdout.write('Cleanup started...')
 
 // Cleanup components folder
 rm('-rf', 'app/components/*')
+mkdir('app/components/Navbar')
 
 // Cleanup containers folder
 rm('-rf', 'app/containers/*')
 mkdir('app/containers/App')
 mkdir('app/containers/NotFoundPage')
 mkdir('app/containers/HomePage')
-cp('internals/templates/appContainer.js', 'app/containers/App/index.js')
-cp('internals/templates/styles.css', 'app/containers/App/styles.css')
-cp('internals/templates/notFoundPage.js', 'app/containers/NotFoundPage/index.js')
-cp('internals/templates/homePage.js', 'app/containers/HomePage/index.js')
+cp('internals/templates/containers/App/index.js', 'app/containers/App/index.js')
+cp('internals/templates/containers/App/styles.css', 'app/containers/App/styles.css')
+cp('internals/templates/containers/NotFoundPage/index.js', 'app/containers/NotFoundPage/index.js')
+cp('internals/templates/containers/HomePage/index.js', 'app/containers/HomePage/index.js')
+
+rm('-rf', 'app/models/*')
+cp('internals/templates/models/navigation.js', 'app/models/navigation.js')
 
 // Copy selectors
 mkdir('app/containers/App/tests')
-cp('internals/templates/selectors.js',
-  'app/containers/App/selectors.js')
-cp('internals/templates/selectors.test.js',
-  'app/containers/App/tests/selectors.test.js')
+cp('internals/templates/containers/App/selectors.js', 'app/containers/App/selectors.js')
+cp('internals/templates/containers/App/tests/selectors.test.js', 'app/containers/App/tests/selectors.test.js')
 
 // Utils
 rm('-rf', 'app/utils')
