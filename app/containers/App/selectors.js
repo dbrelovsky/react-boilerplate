@@ -4,7 +4,7 @@
 
 import { createSelector } from 'reselect'
 
-const selectGlobal = () => (state) => state.get('global')
+const selectGlobal = () => state => state.get('global')
 
 const selectCurrentUser = () => createSelector(
   selectGlobal(),
@@ -41,6 +41,9 @@ const selectLocationState = () => {
     return prevRoutingStateJS
   }
 }
+
+export const selectNavigationState = () => state => state.get('navigation')
+export const selectNavigationLinks = () => createSelector(selectNavigationState(), nav => nav.links)
 
 export {
   selectGlobal,

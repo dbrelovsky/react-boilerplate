@@ -1,0 +1,16 @@
+.navbar {
+  height: 50px;
+  display: flex;
+}
+
+.left {
+  flex: 0 0 auto;
+}
+
+.center {
+  flex: 0 1 auto;
+}
+
+.right {
+  flex: 0 0 auto;
+}

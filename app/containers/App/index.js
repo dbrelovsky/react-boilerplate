@@ -15,23 +15,33 @@ import Img from 'components/Img'
 import Footer from 'components/Footer'
 import Banner from './banner-metal.jpg'
 import A from 'components/A'
+import Navbar from 'components/Navbar'
 
 import styles from './styles.css'
 
 function App (props) {
   return (
-    <div className={styles.wrapper}>
-      <A className={styles.logoWrapper} href='https://twitter.com/mxstbr'>
-        <Img className={styles.logo} src={Banner} alt='react-boilerplate - Logo' />
-      </A>
-      {props.children}
-      <Footer />
+    <div>
+      <Navbar styles={appStyles.navbar} />
+      <div className={styles.wrapper}>
+        <A className={styles.logoWrapper} href='https://twitter.com/mxstbr'>
+          <Img className={styles.logo} src={Banner} alt='react-boilerplate - Logo' />
+        </A>
+        {props.children}
+        <Footer />
+      </div>
     </div>
   )
 }
 
 App.propTypes = {
   children: React.PropTypes.node
+}
+
+const appStyles = {
+  navbar: {
+    backgroundColor: 'green'
+  }
 }
 
 export default App
