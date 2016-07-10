@@ -47,7 +47,7 @@ describe('request', () => {
         status: 404,
         statusText: 'Not Found',
         headers: {
-          'Content-type': 'application/json',
+          'Content-type': 'application/json'
         }
       })
 
