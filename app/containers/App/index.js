@@ -6,7 +6,12 @@
  * contain code that should be seen on all pages. (e.g. navigation bar)
  */
 
+<<<<<<< HEAD
 import React from 'react'
+=======
+import React from 'react';
+import Helmet from 'react-helmet';
+>>>>>>> 0b0c61bbc7fd1fde27b5391ebc936ebc6b636462
 
 // Import the CSS reset, which HtmlWebpackPlugin transfers to the build folder
 import 'sanitize.css/sanitize.css'
@@ -21,15 +26,20 @@ import styles from './styles.css'
 
 function App (props) {
   return (
-    <div>
-      <Navbar styles={appStyles.navbar} />
-      <div className={styles.wrapper}>
-        <A className={styles.logoWrapper} href='https://twitter.com/mxstbr'>
-          <Img className={styles.logo} src={Banner} alt='react-boilerplate - Logo' />
-        </A>
-        {props.children}
-        <Footer />
-      </div>
+
+    <div className={styles.wrapper}>
+      <Helmet
+        titleTemplate="%s - React.js Boilerplate"
+        defaultTitle="React.js Boilerplate"
+        meta={[
+          { name: 'description', content: 'A React.js Boilerplate application' },
+        ]}
+      />
+      <A className={styles.logoWrapper} href="https://twitter.com/mxstbr">
+        <Img className={styles.logo} src={Banner} alt="react-boilerplate - Logo" />
+      </A>
+      {props.children}
+      <Footer />
     </div>
   )
 }

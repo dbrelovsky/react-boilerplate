@@ -1,5 +1,19 @@
+<<<<<<< HEAD
 import React from 'react'
 import { connect } from 'react-redux'
+=======
+/*
+ *
+ * {{ properCase name }}
+ *
+ */
+
+import React from 'react';
+import { connect } from 'react-redux';
+{{#if wantHeaders}}
+import Helmet from 'react-helmet';
+{{/if}}
+>>>>>>> 0b0c61bbc7fd1fde27b5391ebc936ebc6b636462
 {{#if wantActionsAndReducer}}
 import select{{properCase name}} from './selectors'
 {{/if}}
@@ -15,6 +29,14 @@ export class {{ properCase name }} extends React.Component { // eslint-disable-l
       {{else}}
       <div>
       {{/if}}
+        {{#if wantHeaders}}
+        <Helmet
+          title="{{properCase name}}"
+          meta={{curly true}}[
+            {{curly true}} name: 'description', content: 'Description of {{properCase name}}' {{curly}},
+          ]{{curly}}
+        />
+        {{/if}}
       This is {{properCase name}} container !
       </div>
     )
