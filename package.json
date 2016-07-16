@@ -173,7 +173,7 @@
     "eslint": "3.1.0",
     "eslint-config-standard": "^5.3.1",
     "eslint-config-standard-jsx": "^1.2.1",
-    "eslint-config-standard-react": "^2.5.0",
+    "eslint-config-standard-react": "^2.5.1",
     "eslint-import-resolver-webpack": "0.3.2",
     "eslint-plugin-import": "1.10.3",
     "eslint-plugin-jsx-a11y": "1.5.5",
