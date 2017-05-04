@@ -226,7 +226,7 @@
     "stylelint": "7.0.2",
     "stylelint-config-standard": "10.0.0",
     "url-loader": "0.5.7",
-    "webpack": "2.1.0-beta.15",
+    "webpack": "2.5.0",
     "webpack-dev-middleware": "1.6.1",
     "webpack-hot-middleware": "2.12.1"
   }
