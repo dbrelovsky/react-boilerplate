@@ -214,7 +214,7 @@
     "offline-plugin": "3.4.2",
     "plop": "1.5.0",
     "postcss-cssnext": "2.7.0",
-    "postcss-focus": "1.0.0",
+    "postcss-focus": "2.0.0",
     "postcss-loader": "0.9.1",
     "postcss-reporter": "1.4.1",
     "pre-commit": "1.1.3",
